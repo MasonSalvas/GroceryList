@@ -1,0 +1,20 @@
+
+10000 Apple 0.15 N
+11000 Sugar 1.75 N
+12000 Rice 1.00 T
+13000 Popcorn 3.00 T
+14000 Bread 1.52 T
+15000 peach 0.25 N
+16000 chocolate 1.34 T
+17000 Spaghetti 2.50 T
+18000 Juice 1.67 N
+19000 Wheaties 2.01 N
+12345 Turkey 9.99 T
+20000 Nuts 3.88 N
+21000 pie 6.99 T
+22000 pizza 8.56 T
+23000 steak 20.66 T
+
+
+
+
