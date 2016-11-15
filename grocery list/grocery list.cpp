@@ -25,17 +25,17 @@ int main()
 	ItemType temp;				//the temp itemtype that is used thourghtout
 	ItemType ar[1];				//will create 
 	gList my_list;
-	ItemType noob_sauce;
+	ItemType itemtype;
 
 	double total = 0;				//calculate the total
 	double tax = 0;					//calculates the tax
 	const double tax_rate = 0.15;	//the constant tax rate 
-	double errythang = 0;			//is the total of both tax and total price
+	double finalTotal = 0;			//is the total of both tax and total price
 
-	noob_sauce.product_number = 0;
-	noob_sauce.name = " ";
-	noob_sauce.tax = false;
-	noob_sauce.price = 0;
+	itemtype.product_number = 0;
+	itemtype.name = " ";
+	itemtype.tax = false;
+	itemtype.price = 0;
 
 	int product_num = 1;	//specifiys the product
 	int amount = 0;			//how many of tht product you are getting
@@ -93,20 +93,20 @@ int main()
 		else if(my_list.retrieveItem(product_num))
 		{
 			
-			noob_sauce = my_list.getItem(product_num, test);
+			itemtype = my_list.getItem(product_num, test);
 
-			cout<<amount<<" Product number is "<<noob_sauce.product_number<<" description is "<< noob_sauce.name<<" cost "
-				<<noob_sauce.price<<" taxable "<<noob_sauce.tax<<endl;
+			cout<<amount<<" Product number is "<<itemtype.product_number<<" description is "<< itemtype.name<<" cost "
+				<<itemtype.price<<" taxable "<<itemtype.tax<<endl;
 			
-			outfile<<amount<<" items were bought with the Product number of "<<noob_sauce.product_number
-				<<", description is "<<noob_sauce.name<<", cost $"
-				<<noob_sauce.price<<", taxable "<<noob_sauce.tax<<endl;
+			outfile<<amount<<" items were bought with the Product number of "<<itemtype.product_number
+				<<", description is "<<itemtype.name<<", cost $"
+				<<itemtype.price<<", taxable "<<itemtype.tax<<endl;
 			
-			total += noob_sauce.price * amount;
+			total += itemtype.price * amount;
 			
-			if(noob_sauce.tax)
+			if(itemtype.tax)
 			{
-				tax += (noob_sauce.price * amount) * tax_rate;
+				tax += (itemtype.price * amount) * tax_rate;
 			}
 		}
 
@@ -118,10 +118,10 @@ int main()
 
 	}
 	outfile<<setprecision(2)<<std::fixed;
-	errythang = tax + total;
+	finalTotal = tax + total;
 	outfile<<"The amount before tax is: $"<<total<<endl;
 	outfile<<"Tax: $"<<tax<<endl;
-	outfile<<"The total: $"<<errythang<<endl;
+	outfile<<"The total: $"<<finalTotal<<endl;
 
 
 	infile.close();
