@@ -23,7 +23,7 @@ gList::gList(const gList& copy_me)
 	
 }
 
-//part of teh big three, is the destructor 
+//part of the big three, is the destructor 
 gList::~gList()
 {
 	NodeType * tempPtr;
